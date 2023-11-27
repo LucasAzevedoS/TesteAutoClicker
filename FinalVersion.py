@@ -1,23 +1,55 @@
 import pyautogui
 import time
 
-def tab():
-    pyautogui.press("tab")
-    time.sleep(1)
-    pyautogui.press("tab")
-    time.sleep(1)
-    pyautogui.press("tab")
-    time.sleep(1)
-    pyautogui.press("tab")
-    time.sleep(1)
-    pyautogui.alert(f"Download concluído para o documento {counter}")
+## selecionar primeira caixa e dar 3 tabs a partir da inicialização do programa
 
+## Função de clicks para download
+def donwload():
+    pyautogui.press("tab")
+    time.sleep(0.5)
+    pyautogui.press("tab")
+    time.sleep(0.5)
+    pyautogui.press("tab")
+    time.sleep(0.5)
+    pyautogui.press("tab")
+    time.sleep(0.5)
 
-pyautogui.alert("O programa ja vai iniciar")
-pyautogui.press("alt", "tab")
-time.sleep(1)
+    pyautogui.press("enter")
+    time.sleep(0.5)
+    pyautogui.press("tab")
+    time.sleep(0.5)
+    pyautogui.press("tab")
+    time.sleep(0.5) 
+    pyautogui.press("tab")
+    time.sleep(0.5)
+    pyautogui.press("tab")
+    time.sleep(0.5)
+    pyautogui.press('space')
+    pyautogui.press("tab")                  
+    time.sleep(0.5)
+    pyautogui.press("enter")
+    time.sleep(0.5)
+   
+## função principal do programa, total de documento e divisão em blocos
+def main():
+    total_documents = 514
+    block_size = 30
+    pause_between_blocks = 10  # segundos
 
-for _ in range():
-    tab()
+    pyautogui.alert("O programa vai começar")
+    pyautogui.PAUSE = 2
 
-pyautogui.alert("O programa foi encerrado")
+    counter = 1
+
+## loop para download dos documentos
+    for _ in range(0, total_documents, block_size):
+        for _ in range(min(block_size, total_documents - _)):
+            donwload()
+            
+        time.sleep(pause_between_blocks)
+
+    pyautogui.alert("O programa terminou")
+
+## chamada da função principal
+if __name__ == "__main__":
+    main()
