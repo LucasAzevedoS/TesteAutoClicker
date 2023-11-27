@@ -33,7 +33,7 @@ def donwload():
 ## função principal do programa, total de documento e divisão em blocos
 def main():
     total_documents = 514
-    block_size = 30
+    block_size = 40
     pause_between_blocks = 10  # segundos
 
     pyautogui.alert("O programa vai começar")
