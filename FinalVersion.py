@@ -3,7 +3,7 @@ import time
 
 ## selecionar primeira caixa e dar 3 tabs a partir da inicialização do programa
 
-## Função de clicks para download
+## Função de clicks para downloads
 def donwload():
     pyautogui.press("tab")
     time.sleep(0.5)
