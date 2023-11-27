@@ -13,8 +13,7 @@ def donwload():
     time.sleep(0.5)
     pyautogui.press("tab")
     time.sleep(0.5)
-
-    pyautogui.press("enter")
+    pyautogui.press("space")
     time.sleep(0.5)
     pyautogui.press("tab")
     time.sleep(0.5)
@@ -27,12 +26,12 @@ def donwload():
     pyautogui.press('space')
     pyautogui.press("tab")                  
     time.sleep(0.5)
-    pyautogui.press("enter")
+    pyautogui.press("space")
     time.sleep(0.5)
    
 ## função principal do programa, total de documento e divisão em blocos
 def main():
-    total_documents = 514
+    total_documents = 50
     block_size = 40
     pause_between_blocks = 10  # segundos
 
